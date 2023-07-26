@@ -13,12 +13,21 @@ USING:
 # Install
 
 1.Flask
-```pip install Flask```
+```
+pip install Flask
+```
 
 2.scikit-learn 
 
-```pip install scikit-learn```
+```
+pip install scikit-learn
+```
+
 3.pandas
-```pip install pandas```
+```
+pip install pandas
+```
 4.NumPy
-```pip install numpy```
+```
+pip install numpy
+```
