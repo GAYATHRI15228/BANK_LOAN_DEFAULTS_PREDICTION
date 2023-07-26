@@ -1,0 +1,118 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    color: #787976;
+}
+
+p {
+
+    font: 400 1rem/1.5625rem "Open Sans", sans-serif;
+}
+
+.p-large {
+    font: 400 1.125rem/1.625rem "Open Sans", sans-serif;
+}
+
+.p-small {
+    font: 400 0.875rem/1.375rem "Open Sans", sans-serif;
+}
+
+.p-heading {
+    margin-bottom: 3.5rem;
+    text-align: center;
+}
+
+.ex-header {
+	padding-top: 5rem;
+	padding-bottom: 2rem;
+	background-color: #153e52;
+	text-align: center;
+}
+
+.ex-header h1 {
+    color: #fff;
+    font: 400 1rem/1.5625rem "Open Sans", sans-serif;
+
+
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+	display: block;
+  }
+
+  .row {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+  }
+
+
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.col-lg-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font: 400 1.5rem/2.5rem "Open Sans", sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font: 400 1.25rem/1.875rem "Open Sans", sans-serif;
+}
+
+p {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 3rem;
+    font: 400 1rem/1.5625rem "Open Sans", sans-serif;
+}
+
+
+.btn-solid-lg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 200px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center align horizontally */
+    padding: 1.375rem 2.125rem;
+    border: 0.125rem solid #14bf98;
+    border-radius: 0.25rem;
+    background-color: #14bf98;
+    color: #fff;
+    font: 700 0.75rem/0 "Montserrat", sans-serif;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+
+.btn-solid-lg:hover {
+	background-color: transparent;
+	color: #14bf98;
+	text-decoration: none;
+}

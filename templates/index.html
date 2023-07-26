@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Website Title -->
+    <title>Default Prediction</title>
+
+     <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
+	<link href="static\css\styles.css" rel="stylesheet">
+
+	<!-- Favicon  -->
+    <link rel="icon" href="static\images\logo.svg">
+
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+
+
+    <!-- Header -->
+    <header id="header" class="ex-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1> Loan Application</h1>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </header> <!-- end of ex-header -->
+    <!-- end of header -->
+    <br/>
+
+    <!-- Terms Content -->
+    <div id="Predict" class="ex-basic-2">
+		<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp Please Fill in the details to get your chances of Loan Approval.</h4><br/>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="text-container">
+							<!-- Contact Form -->
+									<form id="contactForm" data-toggle="validator" data-focus="false" action="{{ url_for('prediction') }}" method="POST">
+
+								<div class="form-group">
+									<input name="code" type="number" class="form-control-input" id="code" required min="1" max="260">
+									<label class="label-control" for="code">Id</label>
+									<div class="help-block with-errors"></div>
+								</div>
+								
+								<div class="form-group">
+									<input name="loan_amnt" class="form-control-input" type="number" min="5000" max="2500000" id="loan_amnt" required>
+									<label class="label-control" for="loan_amnt">Loan Amount ($5000 to $25,00,000):</label>
+									<div class="help-block with-errors"></div>
+								</div>
+
+								<div class="form-group">
+									<input name="loan_purpose" list="homes" class="form-control-input" id="loan_purpose" required select>
+									<label class="label-control" for="loan_purpose">Loan Purpose</label>
+									<datalist>
+									<option value="Debt consolidation">
+									<option value="Home improvement">			
+									<option value="Medical expenses">
+									<option value="Vacation">
+									<option value="Education">
+									<option value="Others">
+
+										
+									</datalist>
+									<div class="help-block with-errors"></div>
+								</div>
+
+								<div class="form-group">
+									<input name="annual_inc" type="number" min="100000" max="1200000" class="form-control-input" id="annual_inc" required>
+									<label class="label-control" for="annual_inc">Annual Income:</label>
+									<div class="help-block with-errors"></div>
+								</div>
+
+								<div class="form-group">
+									<input name="fico_avg_score" type="number" min="300" max="850" class="form-control-input" id="fico_avg_score" required>
+									<label class="label-control" for="fico_avg_score">Fico Score</label>
+									<div class="help-block with-errors"></div>
+								</div>
+                    </div> <!-- end of contact form -->
+                </div> 	<!-- end of text-container -->
+				                <div class="col-lg-6">
+                    <div class="text-container">
+							<!-- Contact Form -->
+						
+								
+
+								<div class="form-group">
+									<input name="mort_acc" type="number" class="form-control-input" id="mort_acc" required min="0" max="12">
+									<label class="label-control" for="mort_acc">Number of Mortgage Accounts:</label>
+									<div class="help-block with-errors"></div>
+								</div>
+
+
+								<div class="form-group">
+									<input name="employment_status" list="employment_status" class="form-control-input"  id="employment_status"required select>
+									<label class="label-control" for="employment_status">Employment Status</label>
+									<datalist>
+									<option value="Employed">
+									<option value="UnEmployed">
+									<option value="Self-Employed">
+									</datalist>
+									<br/>
+
+									<div class="form-group">
+										<input name="dti" class="form-control-input" type="number" min="0" max="40" id="dti" required>
+										<label class="label-control" for="dti">Current Debt to Income Ratio (0 to 100):</label>
+										<div class="help-block with-errors"></div>
+									</div>
+
+								<div class="form-group">
+									<input name="term" list="terms" class="form-control-input" type="number" min="24" max="72" id="term" required>
+									<label class="label-control" for="term">Term (in Months)</label>
+									<datalist id="terms">
+									<option value="24">
+									<option value="36">
+									<option value="48">
+									<option value="60">
+									<option value="72">
+									</datalist>
+									<div class="help-block with-errors"></div>
+								</div>
+							
+								<div class="form-group">
+									<input name="home_ownership" list="home_ownership" class="form-control-input"  id="home_ownership" required select>
+									<label class="label-control" for="home_ownership">Home Ownership</label>
+									<datalist>
+									<option value="MORTGAGE">
+									<option value="RENT">
+									<option value="OWN">									</datalist>
+									<div class="help-block with-errors"></div>
+								</div>
+								
+								</div>
+									</div>
+								</div>
+					
+                    <button type="submit" class="form-control-submit-button">MAKE PREDICTION</button>
+					</form>
+					</div> <!-- end of container -->
+                    
+			
+		</div>
+    </div> 
+  
+
+
+</body>
+</html>
